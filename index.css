@@ -2,6 +2,7 @@
 
 body {
     line-height: normal;
+    position: relative;
 }
 
 #navbar,
@@ -9,7 +10,6 @@ body {
     padding: 16px 0;
 }
 
-#jumbotron,
 #benefits,
 #companies,
 #process,
@@ -17,13 +17,15 @@ body {
     padding: 80px 0 100px 0;
 }
 
+#jumbotron,
 #cta-banner {
     padding: 40px 0;
 }
 
 .section-header {
+    max-width: 520px;
     text-align: center;
-    margin-bottom: 32px;
+    margin: 0 auto 32px auto;
 }
 
 .section-header .title {
@@ -56,6 +58,10 @@ body {
 
 /* Navbar */
 
+#navbar {
+    background-color: #4eafd1;
+}
+
 #navbar .navbar-nav {
     text-align: right;
     margin: 0 0 0 auto;
@@ -63,6 +69,14 @@ body {
 
 #navbar .nav-link {
     padding: 0;
+}
+
+#navbar .nav-link:hover {
+    text-decoration: underline;
+}
+
+#navbar img {
+    height: 60px;
 }
 
 @media (min-width: 768px) {
@@ -79,14 +93,24 @@ body {
 
 /* Jumbotron */
 
+#jumbotron {
+    background-color: #4eafd1;
+}
+
 #jumbotron .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
+#jumbotron .left {
+    max-width: 380px;
+    color: #13233d;
+}
+
 #jumbotron .title {
     font-size: 48px;
+    margin-bottom: 8px;
 }
 
 #jumbotron .description {
@@ -94,7 +118,15 @@ body {
     margin-bottom: 24px;
 }
 
+#jumbotron .right img {
+    height: 400px;
+}
+
 /* Benefits */
+
+#benefits {
+    color: #13233d;
+}
 
 #benefits .grid {
     display: grid;
@@ -116,20 +148,43 @@ body {
     margin-bottom: 4px;
 }
 
+#benefits .icon {
+    height: 64px;
+    width: 64px;
+    padding: 16px;
+    border-radius: 50%;
+    background-color: #4eafd1;
+}
+
 /* Companies */
+
+#companies {
+    color: #13233d;
+    background-color: #D0D2D3;
+}
 
 #companies .grid {
     display: grid;
-    grid-gap: 32px;
+    grid-column-gap: 64px;
+    grid-row-gap: 32px;
     grid-template-columns: repeat(4, 1fr);
 }
 
 #companies .grid .company {
-    background-color: gray;
-    height: 200px;
+    display: flex;
+    align-items: center;
+}
+
+#companies .grid .company img {
+    width: 100%;
+    max-height: 80px;
 }
 
 /* Process */
+
+#process {
+    color: #13233d;
+}
 
 #process .grid {
     display: grid;
@@ -144,22 +199,32 @@ body {
 #process .step .icon {
     width: 64px;
     height: 64px;
+    padding: 16px;
     border-radius: 50%;
-    background-color: darkgray;
+    background-color: #4eafd1;
     margin: 0 auto 8px auto;
 }
 
 /* CTA Banner */
 
 #cta-banner {
+    color: #13233d;
     text-align: center;
 }
 
 #cta-banner .description {
+    font-size: 24px;
+    margin: 0 auto;
+    max-width: 600px;
     margin-bottom: 24px;
 }
 
 /* Testimonials */
+
+#testimonials {
+    color: #13233d;
+    background-color: #4eafd1;
+}
 
 #testimonials .grid .testimonial,
 #testimonials .indicators {
@@ -167,22 +232,71 @@ body {
     margin: 0 auto;
 }
 
+#testimonials .grid-outer {
+    position: relative;
+    overflow: hidden;
+    height: 295px;
+    margin-bottom: 26px;
+}
+
 #testimonials .grid {
-    margin-bottom: 32px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: transform 0.5s ease 0s;
+}
+
+#testimonials .grid .testimonial:nth-of-type(1) {
+    transform: translateX(0%);
+}
+
+#testimonials .grid .testimonial:nth-of-type(2) {
+    transform: translateX(calc(100% + 115px + 4px));
+}
+
+#testimonials .grid .testimonial:nth-of-type(3) {
+    transform: translateX(calc(200% + 115px + 4px + 115px + 4px));
 }
 
 #testimonials .grid .testimonial {
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    position: absolute;
+}
+
+#testimonials .grid .content {
+    width: 700px;
+    display: flex;
     padding: 32px;
     border-radius: 16px;
-    background-color: gray;
-    display: flex;
+    background-color: white;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
 #testimonials .testimonial .image {
-    width: 250px;
-    height: 250px;
+    width: 225px;
+    height: 225px;
     background-color: lightgray;
     margin-right: 32px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#testimonials .testimonial:nth-child(1) .image {
+    background-image: url("images/kendra.jpg");
+}
+
+#testimonials .testimonial:nth-child(2) .image {
+    background-image: url("images/eduardo.jpg");
+}
+
+#testimonials .testimonial:nth-child(3) .image {
+    background-image: url("images/saksham.jpg");
 }
 
 #testimonials .testimonial .right .text {
@@ -192,18 +306,34 @@ body {
 #testimonials .indicators {
     display: grid;
     grid-gap: 32px;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 }
 
 #testimonials .indicators .item {
-    height: 100px;
-    background-color: gray;
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    transition: 0.3s all;
+}
+
+#testimonials .indicators .item.active,
+#testimonials .indicators .item:hover {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+#testimonials .indicators .item img {
+    width: 100%;
+    max-height: 50px;
 }
 
 /* Footer */
 
 #footer {
     position: relative;
+    color: #e6e7e9;
+    background-color: #13233d;
 }
 
 #footer .container,
@@ -217,46 +347,19 @@ body {
     justify-content: space-between;
 }
 
+#footer a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+#footer a:hover {
+    text-decoration: underline;
+}
+
 #footer .logo {
     z-index: 1;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    width: 40px;
-    background-color: darkgray;
-}
-
-/* Temporary Background Colors */
-
-#navbar {
-    background-color: lightpink;
-}
-
-#jumbotron {
-    background-color: lightcoral;
-}
-
-#benefits {
-    background-color: lightcyan;
-}
-
-#companies {
-    background-color: lightseagreen;
-}
-
-#process {
-    background-color: lightpink;
-}
-
-#cta-banner {
-    background-color: lightsteelblue;
-}
-
-#testimonials {
-    background-color: lightyellow;
-}
-
-#footer {
-    background-color: lightgreen;
 }

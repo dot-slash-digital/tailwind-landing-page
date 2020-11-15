@@ -19,11 +19,11 @@
         <!-- CSS -->
         <link rel="stylesheet" type="text/css" href="index.css">
     </head>
-    <body>
+    <body id="home" data-spy="scroll" data-target="#navbar-scrollspy">
         <div id="navbar">
             <nav id="navbar-scrollspy" class="navbar navbar-expand-md navbar-dark container">
-                <a href="#navbar">
-                    <div style="height: 60px; width: 150px; background-color: darkgray"></div>
+                <a href="#home">
+                    <img src="images/full-logo-with-subtitle.png" />
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-nav">
                     <span class="navbar-toggler-icon"></span>
@@ -49,12 +49,12 @@
         <div id="jumbotron">
             <div class="container">
                 <div class="left">
-                    <div class="title">title</div>
-                    <div class="description">description goes here...</div>
+                    <div class="title">Take Your Career to New Heights</div>
+                    <div class="description">Work at your dream company with the help of our industry mentors.</div>
                     <a class="button" href="https://tailwindtalent.co">Apply Now!</a>
                 </div>
                 <div class="right">
-                    <div style="width: 400px; height: 300px; background-color: gray"></div>
+                    <img src="images/jumbotron-2.png" />
                 </div>
             </div>
         </div>
@@ -62,61 +62,73 @@
             <div class="container">
                 <div class="section-header">
                     <div class="title">Benefits</div>
-                    <div class="description">description goes here...</div>
+                    <div class="description">By joining Tailwind, you'll get access to all of the following:</div>
                 </div>
                 <div class="grid">
                     <div class="benefit">
                         <div class="left">
-                            <div class="icon" style="height: 64px; width: 64px; background-color: gray; border-radius: 50%"></div>
+                            <div class="icon">
+                                <img src="images/people-fill.svg" />
+                            </div>
                         </div>
                         <div class="right">
-                            <div class="title">title</div>
-                            <div class="description">text goes here... text goes here... text goes here... text goes here... text goes here... text goes here... text goes here...</div>
+                            <div class="title">1-on-1 Mentoring</div>
+                            <div class="description">The interview process can be terrifying, but your dedicated mentor is there to answer all your questions and provide advice to help you land your dream job.</div>
                         </div>
                     </div>
                     <div class="benefit">
                         <div class="left">
-                            <div class="icon" style="height: 64px; width: 64px; background-color: gray; border-radius: 50%"></div>
+                            <div class="icon">
+                                <img src="images/person-check-fill.svg" />
+                            </div>
                         </div>
                         <div class="right">
-                            <div class="title">title</div>
-                            <div class="description">text goes here... text goes here... text goes here... text goes here... text goes here... text goes here... text goes here...</div>
+                            <div class="title">Expert Advice</div>
+                            <div class="description">Your career is in great hands with industry professionals at the top of their game. They know how the interview process works, and many even have experience as an interviewer.</div>
                         </div>
                     </div>
                     <div class="benefit">
                         <div class="left">
-                            <div class="icon" style="height: 64px; width: 64px; background-color: gray; border-radius: 50%"></div>
+                            <div class="icon">
+                                <img src="images/search.svg" />
+                            </div>
                         </div>
                         <div class="right">
-                            <div class="title">title</div>
-                            <div class="description">text goes here... text goes here... text goes here... text goes here... text goes here... text goes here... text goes here...</div>
+                            <div class="title">Company Matching</div>
+                            <div class="description">We find companies that are best for you to apply to based on your preferences and career goals.</div>
                         </div>
                     </div>
                     <div class="benefit">
                         <div class="left">
-                            <div class="icon" style="height: 64px; width: 64px; background-color: gray; border-radius: 50%"></div>
+                            <div class="icon">
+                                <img src="images/calendar2-week.svg" />
+                            </div>
                         </div>
                         <div class="right">
-                            <div class="title">title</div>
-                            <div class="description">text goes here... text goes here... text goes here... text goes here... text goes here... text goes here... text goes here...</div>
+                            <div class="title">Flexible Scheduling</div>
+                            <div class="description">You've got a lot going on, we understand. We work around your schedule so you can meet with your mentor at whatever time is best for you.</div>
                         </div>
                     </div>
                     <div class="benefit">
                         <div class="left">
-                            <div class="icon" style="height: 64px; width: 64px; background-color: gray; border-radius: 50%"></div>
+                            <div class="icon">
+                                <img src="images/house-fill.svg" />
+                            </div>
                         </div>
                         <div class="right">
-                            <div class="title">title</div>
-                            <div class="description">text goes here... text goes here... text goes here... text goes here... text goes here... text goes here... text goes here...</div>
+                            <div class="title">Post-Offer Help</div>
+                            <div class="description">Our professional advice doesn't just stop once you get an offer, your mentor will also help you negotiate to get the most out of your offer(s) and even find housing for your new position.</div>
                         </div>
                     </div>
                     <div class="benefit">
                         <div class="left">
-                            <div class="icon" style="height: 64px; width: 64px; background-color: gray; border-radius: 50%"></div>
+                            <div class="icon">
+                                <img src="images/wallet2.svg" />
+                            </div>
                         </div>
                         <div class="right">
-                            <div class="title">title</div>
-                            <div class="description">text goes here... text goes here... text goes here... text goes here... text goes here... text goes here... text goes here...</div>
+                            <div class="title">Risk-Free Pricing</div>
+                            <div class="description">You don't pay us unless you land an internship or full-time position, and our flexible payment plan means your first payment only starts after you receive your first paycheck.</div>
                         </div>
                     </div>
                 </div>
@@ -126,16 +138,33 @@
             <div class="container">
                 <div class="section-header">
                     <div class="title">Companies</div>
-                    <div class="description">description goes here...</div>
+                    <div class="description">Our industry mentors have helped clients land interviews and offers from countless reputable tech companies.</div>
                 </div>
                 <div class="grid">
-                    <div class="company"></div>
-                    <div class="company"></div>
-                    <div class="company"></div>
-                    <div class="company"></div>
-                    <div class="company"></div>
-                    <div class="company"></div>
-                    <div class="company"></div>
+                    <div class="company">
+                        <img src="images/microsoft.svg" />
+                    </div>
+                    <div class="company">
+                        <img src="images/goldman-sachs.svg" />
+                    </div>
+                    <div class="company">
+                        <img src="images/walmart.svg" />
+                    </div>
+                    <div class="company">
+                        <img src="images/capital-one.svg" />
+                    </div>
+                    <div class="company">
+                        <img src="images/charles-schwab.svg" />
+                    </div>
+                    <div class="company">
+                        <img src="images/fidelity-investments.svg" />
+                    </div>
+                    <div class="company">
+                        <img src="images/usaa.svg" />
+                    </div>
+                    <div class="company">
+                        <img src="images/credera.svg" />
+                    </div>
                 </div>
             </div>
         </div>
@@ -143,39 +172,51 @@
             <div class="container">
                 <div class="section-header">
                     <div class="title">Process</div>
-                    <div class="description">description goes here...</div>
+                    <div class="description">Finding your dream job is already difficult, but your mentor simplifies it with our 6-step process.</div>
                 </div>
                 <div class="grid">
                     <div class="step">
-                        <div class="icon"></div>
-                        <div class="title">title</div>
+                        <div class="icon">
+                            <img src="images/building.svg" />
+                        </div>
+                        <div class="title">Discover companies</div>
                     </div>
                     <div class="step">
-                        <div class="icon"></div>
-                        <div class="title">title</div>
+                        <div class="icon">
+                            <img src="images/file-earmark-text.svg" />
+                        </div>
+                        <div class="title">Revise resume</div>
                     </div>
                     <div class="step">
-                        <div class="icon"></div>
-                        <div class="title">title</div>
+                        <div class="icon">
+                            <img src="images/clipboard-check.svg" />
+                        </div>
+                        <div class="title">Submit applications</div>
                     </div>
                     <div class="step">
-                        <div class="icon"></div>
-                        <div class="title">title</div>
+                        <div class="icon">
+                            <img src="images/chat-text.svg" />
+                        </div>
+                        <div class="title">Interview prep</div>
                     </div>
                     <div class="step">
-                        <div class="icon"></div>
-                        <div class="title">title</div>
+                        <div class="icon">
+                            <img src="images/cash-stack.svg" />
+                        </div>
+                        <div class="title">Receive and negotiate offers</div>
                     </div>
                     <div class="step">
-                        <div class="icon"></div>
-                        <div class="title">title</div>
+                        <div class="icon">
+                            <img src="images/house-door.svg" />
+                        </div>
+                        <div class="title">Find housing</div>
                     </div>
                 </div>
             </div>
         </div>
         <div id="cta-banner">
             <div class="container">
-                <div class="description">text content goes here...</div>
+                <div class="description">Ready to take your career to the next level? Submit an application and get ready to meet your mentor!</div>
                 <a class="button" href="https://tailwindtalent.co">Apply Now!</a>
             </div>
         </div>
@@ -183,35 +224,72 @@
             <div class="container">
                 <div class="section-header">
                     <div class="title">Testimonials</div>
-                    <div class="description">description goes here...</div>
+                    <div class="description">Hear from our past clients and see how Tailwind changed their careers.</div>
                 </div>
-                <div class="grid">
-                    <div class="testimonial">
-                        <div class="left">
-                            <div class="image"></div>
+                <div class="grid-outer">
+                    <div class="grid">
+                        <div class="testimonial">
+                            <div class="content">
+                                <div class="left">
+                                    <div class="image"></div>
+                                </div>
+                                <div class="right">
+                                    <div class="text">Tailwind Talent vastly helped me on my interview prep and allowed me to better prepare for my upcoming interview. Tailwind Talent gave me great tips and advice, which contributed to my interview's success.</div>
+                                    <div class="author">
+                                        <div class="name">Kendra Huang</div>
+                                        <div class="school">UT Dallas, Class of 2023</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="right">
-                            <div class="text">review goes here... review goes here... review goes here... review goes here... review goes here... review goes here... review goes here... review goes here... review goes here... review goes here...</div>
-                            <div class="author">
-                                <div class="name">First Last</div>
-                                <div class="school">UT Dallas, Class of 2022</div>
+                        <div class="testimonial">
+                            <div class="content">
+                                <div class="left">
+                                    <div class="image"></div>
+                                </div>
+                                <div class="right">
+                                    <div class="text">Tailwind Talent taught me an invaluable lesson to acing my interviews and easing the application process. I had trouble with passing interviews, and with their mock-interviews and guidance, I got an offer with Goldman Sachs. Tailwind Talent helped changed my perspective of interviews.</div>
+                                    <div class="author">
+                                        <div class="name">Eduardo Heredia</div>
+                                        <div class="school">UT Dallas, Class of 2022</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial">
+                            <div class="content">
+                                <div class="left">
+                                    <div class="image"></div>
+                                </div>
+                                <div class="right">
+                                    <div class="text">Participating in Tailwind has been an amazing experience for me. I really appreciate how supportive everyone is and how they made the internship application process so easy and efficient. I’m blown away by how well the team has executed this program and can’t wait to see the difference they will make by helping people find meaningful careers.</div>
+                                    <div class="author">
+                                        <div class="name">Saksham Sangraula</div>
+                                        <div class="school">UT Dallas, Class of 2022</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="indicators">
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
+                    <div class="item one active">
+                        <img src="images/microsoft.svg" />
+                    </div>
+                    <div class="item two">
+                        <img src="images/goldman-sachs.svg" />
+                    </div>
+                    <div class="item three">
+                        <img src="images/credera.svg" />
+                    </div>
                 </div>
             </div>
         </div>
         <div id="footer">
             <div class="container">
                 <div>&copy; Tailwind Talent, 2020</div>
-                <div><a href="mailto:info@tailwindtalent.co">info@tailwindtalent.co</a></div>
-                <div class="logo"></div>
+                <a href="mailto:info@tailwindtalent.co">info@tailwindtalent.co</a>
+                <img class="logo" src="images/logo-plane.png" />
                 </div>
             </div>
         </div>
