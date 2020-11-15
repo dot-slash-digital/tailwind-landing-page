@@ -1,0 +1,262 @@
+/* Global */
+
+body {
+    line-height: normal;
+}
+
+#navbar,
+#footer {
+    padding: 16px 0;
+}
+
+#jumbotron,
+#benefits,
+#companies,
+#process,
+#testimonials {
+    padding: 80px 0 100px 0;
+}
+
+#cta-banner {
+    padding: 40px 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.section-header .title {
+    font-size: 48px;
+    margin-bottom: 8px;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 32px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+    transition: 0.3s all;
+
+    text-decoration: inherit;
+    color: inherit;
+}
+
+.button:hover {
+    color: inherit;
+    text-decoration: inherit;
+    background-color: #eeeeee;
+}
+
+.button:active {
+    background-color: #e0e0e0;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* Navbar */
+
+#navbar .navbar-nav {
+    text-align: right;
+    margin: 0 0 0 auto;
+}
+
+#navbar .nav-link {
+    padding: 0;
+}
+
+@media (min-width: 768px) {
+    #navbar .nav-link {
+        margin-left: 48px;
+    }
+}
+
+@media (max-width: 767px) {
+    #navbar .nav-link {
+        margin-top: 24px;
+    }
+}
+
+/* Jumbotron */
+
+#jumbotron .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#jumbotron .title {
+    font-size: 48px;
+}
+
+#jumbotron .description {
+    font-size: 24px;
+    margin-bottom: 24px;
+}
+
+/* Benefits */
+
+#benefits .grid {
+    display: grid;
+    grid-gap: 32px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#benefits .grid .benefit {
+    display: flex;
+}
+
+#benefits .grid .benefit .right {
+    flex-grow: 1;
+    margin-left: 16px;
+}
+
+#benefits .grid .benefit .title {
+    font-size: 24px;
+    margin-bottom: 4px;
+}
+
+/* Companies */
+
+#companies .grid {
+    display: grid;
+    grid-gap: 32px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+#companies .grid .company {
+    background-color: gray;
+    height: 200px;
+}
+
+/* Process */
+
+#process .grid {
+    display: grid;
+    grid-gap: 32px;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+#process .grid .step {
+    text-align: center;
+}
+
+#process .step .icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: darkgray;
+    margin: 0 auto 8px auto;
+}
+
+/* CTA Banner */
+
+#cta-banner {
+    text-align: center;
+}
+
+#cta-banner .description {
+    margin-bottom: 24px;
+}
+
+/* Testimonials */
+
+#testimonials .grid .testimonial,
+#testimonials .indicators {
+    width: 700px;
+    margin: 0 auto;
+}
+
+#testimonials .grid {
+    margin-bottom: 32px;
+}
+
+#testimonials .grid .testimonial {
+    padding: 32px;
+    border-radius: 16px;
+    background-color: gray;
+    display: flex;
+}
+
+#testimonials .testimonial .image {
+    width: 250px;
+    height: 250px;
+    background-color: lightgray;
+    margin-right: 32px;
+}
+
+#testimonials .testimonial .right .text {
+    margin-bottom: 16px;
+}
+
+#testimonials .indicators {
+    display: grid;
+    grid-gap: 32px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+#testimonials .indicators .item {
+    height: 100px;
+    background-color: gray;
+}
+
+/* Footer */
+
+#footer {
+    position: relative;
+}
+
+#footer .container,
+#footer .logo {
+    height: 40px;
+}
+
+#footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#footer .logo {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 40px;
+    background-color: darkgray;
+}
+
+/* Temporary Background Colors */
+
+#navbar {
+    background-color: lightpink;
+}
+
+#jumbotron {
+    background-color: lightcoral;
+}
+
+#benefits {
+    background-color: lightcyan;
+}
+
+#companies {
+    background-color: lightseagreen;
+}
+
+#process {
+    background-color: lightpink;
+}
+
+#cta-banner {
+    background-color: lightsteelblue;
+}
+
+#testimonials {
+    background-color: lightyellow;
+}
+
+#footer {
+    background-color: lightgreen;
+}
