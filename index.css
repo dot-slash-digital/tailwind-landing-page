@@ -1,14 +1,18 @@
 /* Global */
 
-body {
-    line-height: normal;
-    position: relative;
-    font-family: 'Open Sans', sans-serif;
+:root {
     --tailwind-blue: #4FAFD0;
     --tailwind-navy: #13233E;
     --tailwind-clay: #BFB8AF;
     --tailwind-gray: #D0D2D3;
     --tailwind-white: #E6E7E8;
+    --space-between-testimonials: 100px;
+}
+
+body {
+    line-height: normal;
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
 }
 
 #navbar,
@@ -23,7 +27,6 @@ body {
     padding: 80px 0 100px 0;
 }
 
-#jumbotron,
 #cta-banner {
     padding: 40px 0;
 }
@@ -65,7 +68,7 @@ body {
 }
 
 .button:active {
-    background-color: #e0e0e0;
+    background-color: var(--tailwind-gray);
 }
 
 #navbar {
@@ -190,14 +193,6 @@ body {
     transition: 0.3s all;
 }
 
-#navbar .nav-link:hover {
-    text-decoration: underline;
-}
-
-#navbar .logo {
-    height: 60px;
-}
-
 #navbar .navbar-toggler {
     transition: 0.3s all;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
@@ -235,10 +230,6 @@ body {
     justify-content: space-between;
 }
 
-#jumbotron .left {
-    max-width: 440px;
-}
-
 #jumbotron .title {
     font-size: 48px;
     font-weight: 600;
@@ -251,11 +242,61 @@ body {
     margin-bottom: 24px;
 }
 
-#jumbotron .right img {
-    height: 400px;
+@media (min-width: 992px) {
+    #jumbotron {
+        padding: 40px 0;
+    }
+
+    #jumbotron .left {
+        width: 440px;
+    }
+
+    #jumbotron .right img {
+        height: 400px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    #jumbotron {
+        padding: 80px 0;
+    }
+
+    #jumbotron .left {
+        width: 400px;
+    }
+
+    #jumbotron .right img {
+        height: 300px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    #jumbotron {
+        padding: 80px 0;
+    }
+
+    #jumbotron .left {
+        width: 300px;
+    }
+
+    #jumbotron .title {
+        font-size: 36px;
+    }
+
+    #jumbotron .description {
+        font-size: 20px;
+    }
+
+    #jumbotron .right img {
+        height: 230px;
+    }
 }
 
 @media (max-width: 575px) {
+    #jumbotron {
+        padding: 80px 0;
+    }
+
     #jumbotron .container {
         display: block;
         text-align: center;
@@ -272,6 +313,28 @@ body {
     #jumbotron .right img {
         height: auto;
         width: 80%;
+    }
+}
+
+@media (max-width: 430px) {
+    #jumbotron .title {
+        font-size: 36px;
+    }
+
+    #jumbotron .description {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 376px) {
+    #navbar .logo {
+        height: 60px;
+    }
+}
+
+@media (max-width: 375px) {
+    #navbar .logo {
+        width: 200px;
     }
 }
 
@@ -394,7 +457,7 @@ body {
 
 @media (max-width: 449px) {
     #process .grid {
-        grid-gap: 16px;
+        grid-gap: 32px 16px;
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -416,15 +479,21 @@ body {
 
 #testimonials .grid .testimonial,
 #testimonials .indicators {
-    width: 700px;
     margin: 0 auto;
+}
+
+#testimonials .grid .content,
+#testimonials .indicators {
+    width: 100%;
 }
 
 #testimonials .grid-outer {
     position: relative;
     overflow: hidden;
-    height: 295px;
-    margin-bottom: 26px;
+    margin-bottom: 26px; /* -6px, which is included in the height (due to box-shadow) */
+    width: calc(100% + 8px); /* 4px for each side due to box-shadow */
+    left: -4px;
+    transition: 0.3s all;
 }
 
 #testimonials .grid {
@@ -436,16 +505,11 @@ body {
     transition: transform 0.5s ease 0s;
 }
 
-#testimonials .grid .testimonial:nth-of-type(1) {
-    transform: translateX(0%);
-}
-
-#testimonials .grid .testimonial:nth-of-type(2) {
-    transform: translateX(calc(100% + 115px + 4px));
-}
-
-#testimonials .grid .testimonial:nth-of-type(3) {
-    transform: translateX(calc(200% + 115px + 4px + 115px + 4px));
+#testimonials .grid .content {
+    display: flex;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
 #testimonials .grid .testimonial {
@@ -454,19 +518,10 @@ body {
     right: 0;
     opacity: 1;
     position: absolute;
-}
-
-#testimonials .grid .content {
-    width: 700px;
-    display: flex;
-    padding: 32px;
-    border-radius: 16px;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+    padding: 0 4px;
 }
 
 #testimonials .testimonial .image {
-    width: 225px;
-    height: 225px;
     margin-right: 32px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -514,6 +569,68 @@ body {
     max-height: 50px;
 }
 
+#testimonials .grid .testimonial:nth-of-type(1) {
+    transform: translateX(calc(calc(100% + var(--space-between-testimonials)) * 0));
+}
+
+#testimonials .grid .testimonial:nth-of-type(2) {
+    transform: translateX(calc(calc(100% + var(--space-between-testimonials)) * 1));
+}
+
+#testimonials .grid .testimonial:nth-of-type(3) {
+    transform: translateX(calc(calc(100% + var(--space-between-testimonials)) * 2));
+}
+
+@media (min-width: 768px) {
+    #testimonials .container {
+        max-width: 720px;
+    }
+
+    #testimonials .testimonial .image {
+        width: 225px;
+        height: 225px;
+    }
+}
+
+@media (max-width: 767px) {
+    #testimonials .grid .testimonial .content {
+        display: block;
+    }
+
+    #testimonials .grid .testimonial .image {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto 16px auto;
+    }
+}
+
+@media (max-width: 575px) {
+    #testimonials .grid-outer {
+        overflow: auto;
+        margin: 0;
+        width: 100%;
+        left: 0;
+    }
+
+    #testimonials .grid-outer,
+    #testimonials .grid,
+    #testimonials .grid .testimonial {
+        position: inherit;
+    }
+
+    #testimonials .grid .testimonial {
+        transform: none !important;
+    }
+
+    #testimonials .grid .testimonial:not(:last-child) {
+        margin-bottom: 32px;
+    }
+
+    #testimonials .indicators {
+        display: none;
+    }
+}
+
 /* Footer */
 
 #footer {
@@ -534,10 +651,7 @@ body {
 
 #footer a {
     text-decoration: inherit;
-}
-
-#footer a:hover {
-    text-decoration: underline;
+    transition: 0.3s all;
 }
 
 @media (min-width: 500px) {

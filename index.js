@@ -2,7 +2,7 @@
 $('body').scrollspy({target: "#navbar-scrollspy"});
 
 // Smooth scrolling for navbar links
-$("#navbar a, #jumbotron a, #jumbotron-carousel a").on('click', function(e) {
+$("#navbar a").on('click', function(e) {
     e.preventDefault();
 
     var navbarHeight = $("#mobile-nav").hasClass("show")
@@ -19,16 +19,40 @@ $('.navbar-collapse a').click(function(){
     $(".navbar-collapse").collapse('hide');
 });
 
-// set active testimonial item on click
+function setTestimonialHeight(index) {
+    $("#testimonials .testimonial:nth-child(" + index + ")").addClass("active");
+    $("#testimonials .grid-outer").css("height", $("#testimonials .testimonial:nth-child(" + index + ")").height() + 6);
+    $("#testimonials .grid").css("transform", "translateX(calc(calc(100% + var(--space-between-testimonials)) * -" + (index - 1) + "))");
+}
+
+// Set testimonial grid size on page load
+$(function() {
+    if ($(window).width() > 575) {
+        $("#testimonials .grid-outer").css("height", $("#testimonials .testimonial:nth-child(1)").height() + 6);
+    } else {
+        $("#testimonials .grid-outer").css("height", "auto");
+    }
+});
+
+// Set testimonial grid size on page resize
+$(window).resize(function() {
+    if ($(window).width() > 575) {
+        $("#testimonials .grid-outer").css("height", $("#testimonials .testimonial.active").height() + 6);
+    } else {
+        $("#testimonials .grid-outer").css("height", "auto");
+    }
+});
+
+// Set active testimonial item on click
 $("#testimonials .item").click(function() {
-    $("#testimonials .item").removeClass("active");
+    $("#testimonials .indicators .item, #testimonials .testimonial").removeClass("active");
     $(this).addClass("active");
 
     if ($(this).hasClass("one")) {
-        $("#testimonials .grid").css("transform", "translateX(0%)");
+        setTestimonialHeight(1);
     } else if ($(this).hasClass("two")) {
-        $("#testimonials .grid").css("transform", "translateX(calc(-100% + 115px - 4px))");
+        setTestimonialHeight(2);
     } else if ($(this).hasClass("three")) {
-        $("#testimonials .grid").css("transform", "translateX(calc(-200% + 115px - 4px + 115px - 4px))");
+        setTestimonialHeight(3);
     }
 });
