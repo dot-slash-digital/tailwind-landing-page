@@ -3,7 +3,7 @@
 :root {
     --tailwind-blue: #4FAFD0;
     --tailwind-navy: #13233E;
-    --tailwind-clay: #BFB8AF;
+    --tailwind-sand: #BFB8AF;
     --tailwind-gray: #D0D2D3;
     --tailwind-white: #E6E7E8;
     --space-between-testimonials: 100px;
@@ -71,16 +71,18 @@ body {
     background-color: var(--tailwind-gray);
 }
 
+body,
 #navbar {
-    background-color: var(--tailwind-blue);
+    background-color: var(--tailwind-white);
 }
 
 #navbar .nav-link {
-    color: var(--tailwind-white);
+    color: var(--tailwind-navy);
 }
 
+#navbar .nav-link.active,
 #navbar .nav-link:hover {
-    color: var(--tailwind-gray);
+    color: var(--tailwind-blue);
 }
 
 #navbar .navbar-toggler {
@@ -101,7 +103,7 @@ body {
 }
 
 #benefits {
-    background-color: var(--tailwind-white);
+    background-color: var(--tailwind-gray);
 }
 
 #benefits .section-header,
@@ -116,7 +118,7 @@ body {
 }
 
 #companies {
-    background-color: var(--tailwind-gray);
+    background-color: var(--tailwind-white);
 }
 
 #companies .section-header {
@@ -124,7 +126,7 @@ body {
 }
 
 #process {
-    background-color: var(--tailwind-white);
+    background-color: var(--tailwind-gray);
 }
 
 #process .section-header,
@@ -182,6 +184,14 @@ body {
 }
 
 /* Navbar */
+
+#navbar {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+}
 
 #navbar .navbar-nav {
     text-align: right;
@@ -253,6 +263,7 @@ body {
 
     #jumbotron .right img {
         height: 400px;
+        margin-bottom: -40px;
     }
 }
 
@@ -266,7 +277,8 @@ body {
     }
 
     #jumbotron .right img {
-        height: 300px;
+        height: 350px;
+        margin-bottom: -80px;
     }
 }
 
@@ -294,7 +306,7 @@ body {
 
 @media (max-width: 575px) {
     #jumbotron {
-        padding: 80px 0;
+        padding-top: 80px;
     }
 
     #jumbotron .container {
@@ -335,6 +347,18 @@ body {
 @media (max-width: 375px) {
     #navbar .logo {
         width: 200px;
+    }
+}
+
+@media (min-width: 376px) {
+    #jumbotron {
+        margin-top: 108px; /* size of navbar */
+    }
+}
+
+@media (max-width: 375px) {
+    #jumbotron {
+        margin-top: 100px; /* size of navbar */
     }
 }
 
@@ -523,6 +547,7 @@ body {
 
 #testimonials .testimonial .image {
     margin-right: 32px;
+    border-radius: 50%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;

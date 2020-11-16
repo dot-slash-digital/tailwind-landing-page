@@ -1,16 +1,17 @@
 // Enable scrollspy
-$('body').scrollspy({target: "#navbar-scrollspy"});
+$('body').scrollspy({target: "#navbar-scrollspy", offset: $("#navbar").outerHeight()});
 
 // Smooth scrolling for navbar links
 $("#navbar a").on('click', function(e) {
     e.preventDefault();
 
     var navbarHeight = $("#mobile-nav").hasClass("show")
-        ? ($("#navbar").height() - $("#mobile-nav").height())
-        : $("#navbar").height();
+        ? ($("#navbar").outerHeight() - $("#mobile-nav").height()) - 1
+        : $("#navbar").outerHeight() - 1;
+    console.log(navbarHeight);
 
     $('html, body').animate({
-        scrollTop: ($(this.hash).offset().top)
+        scrollTop: ($(this.hash).offset().top - navbarHeight)
     }, 800);
 });
 
