@@ -1,0 +1,266 @@
+/* Global */
+
+:root {
+    --tailwind-blue: #4FAFD0;
+    --tailwind-navy: #13233E;
+    --tailwind-sand: #BFB8AF;
+    --tailwind-gray: #E6E7E8;
+    --tailwind-white: #FBFBFB;
+    --space-between-testimonials: 100px;
+}
+
+.title-1 {
+    font-family: 'Yeseva One', cursive;
+    font-size: 72px;
+    line-height: 80px;
+}
+
+.title-3 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.paragraph {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.caption {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    padding: 0 16px;
+    margin: 0 auto;
+}
+
+.button {
+    color: var(--tailwind-navy);
+    background-color: var(--tailwind-blue);
+    border-radius: 8px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    padding: 8px 32px;
+    transition: 0.3s all;
+}
+
+.button:hover {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+p {
+    margin: 0 0 4px 0;
+}
+
+/* Jumbotron */
+
+#jumbotron {
+    background-color: var(--tailwind-navy);
+    height: 200px;
+}
+
+#jumbotron a {
+    text-decoration: none;
+    color: var(--tailwind-white);
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 156px;
+}
+
+#jumbotron a:hover span {
+    text-decoration: underline !important;
+}
+
+#jumbotron img {
+    width: 12px;
+    margin-right: 8px;
+}
+
+/* Logo Header */
+
+#logo-header {
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 110px;
+    left: calc(50% - 60px);
+    background-color: var(--tailwind-white);
+}
+
+#logo-header img {
+    width: 96px;
+    margin: 16px 12px 0 12px;
+}
+
+/* Main Section */
+
+#main-section {
+    background-color: var(--tailwind-white);
+    padding: 94px 0 121px 0;
+}
+
+#main-section .intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+#main-section .intro a {
+    text-decoration: none;
+}
+
+#main-section .tags {
+    display: flex;
+    margin-bottom: 32px;
+    flex-flow: wrap;
+}
+
+#main-section .tag {
+    margin-right: 8px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    background-color: var(--tailwind-gray);
+    padding: 4px 8px;
+}
+
+#main-section .tag img {
+    height: 12px;
+    margin-right: 4px;
+}
+
+#main-section .section:not(:last-child) {
+    margin-bottom: 32px;
+}
+
+#main-section .section-title {
+    margin-bottom: 16px;
+}
+
+#main-section ul.section-description {
+    padding-inline-start: 28px;
+}
+
+#main-section ul.section-description li:not(:last-child) {
+    margin-bottom: 4px;
+}
+
+@media (max-width: 465px) {
+    #jumbotron a {
+        display: none;
+    }
+
+    #main-section .title-1 {
+        font-size: 60px;
+        line-height: 72px;
+    }
+}
+
+@media (max-width: 400px) {
+    #main-section .intro {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #main-section .intro a {
+        margin-top: 36px;
+        margin-bottom: 48px;
+    }
+
+    #main-section .tags {
+        margin-top: -130px;
+        margin-bottom: 72px;
+    }
+}
+
+@media (max-width: 359px) {
+    #main-section .intro a {
+        margin-top: 72px;
+    }
+
+    #main-section .tags {
+        margin-top: -165px;
+    }
+
+    #main-section .tag {
+        margin-bottom: 8px;
+    }
+}
+
+/* Footer */
+
+#footer {
+    position: relative;
+    background-color: var(--tailwind-navy);
+    padding: 32px 0;
+}
+
+#footer .container div,
+#footer .container a {
+    color: var(--tailwind-white);
+    text-decoration: none;
+}
+
+#footer .logo,
+#footer .container {
+    height: 40px;
+}
+
+#footer .logo {
+    z-index: 1;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#footer a {
+    transition: 0.3s all;
+}
+
+#footer a:hover {
+    text-decoration: underline !important;
+}
+
+@media (min-width: 500px) {
+    #footer .logo {
+        top: 50%;
+    }
+
+    #footer .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 499px) {
+    #footer .logo {
+        top: 48px;
+    }
+
+    #footer .container {
+        display: block;
+        margin-top: 48px;
+        text-align: center;
+    }
+
+    #footer .container > div {
+        margin-bottom: 4px;
+    }
+}
