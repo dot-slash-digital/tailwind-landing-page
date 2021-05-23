@@ -161,6 +161,14 @@ p {
     margin-bottom: 4px;
 }
 
+#main-section div.section-description ul.section-description {
+    margin-top: 0;
+}
+
+#main-section ul.section-description ul.section-description {
+    margin-top: 4px;
+}
+
 @media (max-width: 465px) {
     #jumbotron a {
         display: none;
