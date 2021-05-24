@@ -110,6 +110,7 @@ p {
 /* Main Section */
 
 #main-section {
+    color: var(--tailwind-navy);
     background-color: var(--tailwind-white);
     padding: 94px 0 121px 0;
 }
